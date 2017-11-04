@@ -27,3 +27,5 @@ class Dataset(object):
 		total = len(dataset)
 		print("Dataset: ", dataset)
 		shuffle(dataset)
+
+		
