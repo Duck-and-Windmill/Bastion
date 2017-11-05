@@ -14,7 +14,9 @@ class Dataset(object):
 		self.test = self.dataset[t+v:]
 
 	def load_dataset(self, name):
-		if name == 'train':
+		if name == 'full':
+			return self.dataset
+		elif name == 'train':
 			return self.train
 		elif name == 'validation':
 			return self.valid
