@@ -3,7 +3,7 @@ import numpy as np
 from scraper import scrape
 import data
 
-dataset = data.Dataset(100, 1)
+dataset = data.Dataset(35, 1)
 
 X = dataset.load_dataset('train')
 Y = dataset.load_dataset('test')
