@@ -64,7 +64,7 @@ def getData():
 	with open('sample_cache.txt', 'r+') as file:
 		sample_data = file.read()
 
-		if not read_dat:
+		if not sample_data:
 			sample = ['https://www.nytimes.com/2017/11/03/technology/silicon-valley-baltimore-schools.html', 'https://www.nytimes.com/2017/11/01/technology/personaltech/apple-iphone-x-review.html', 
 			'https://www.livescience.com/60833-robot-cracks-captchas-in-minutes.html', 'http://www.slate.com/articles/technology/technology/2017/11/could_emphasizing_time_well_spent_fix_facebook_s_russia_problem.html',
 			'https://en.wikipedia.org/wiki/Bangkok', 'https://en.wikipedia.org/wiki/Boston_Celtics', 'https://en.wikipedia.org/wiki/JetBlue',
