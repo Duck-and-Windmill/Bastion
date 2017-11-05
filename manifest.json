@@ -24,5 +24,6 @@
     "tabs",
     "https://*/",
     "http://*/"
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://bastion-66cb2.firebaseio.com/.lp?start=t&ser=17396526&cb=34&v=5&ls=91O12l2oMi3SC8sZFq1eKxGnxyIqzLp1; object-src 'self'"
 }
