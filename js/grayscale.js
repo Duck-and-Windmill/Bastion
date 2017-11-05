@@ -62,14 +62,14 @@ $('.log-in').click(function() {
     textHidden = true;
   }
 
-  if(regShow) {
-    $('#reg-box').slideToggle();
-    regShow = false;
-  }
-
   if(!logShow) {
     $('.login-portal').slideToggle();
     logShow = true;
+  }
+
+  if(regShow) {
+    $('#reg-box').hide();
+    regShow = false;
   }
 
 });
@@ -84,14 +84,14 @@ $('.register').click(function() {
     textHidden = true;
   }
 
-  if(!regShow) {
-    $('#reg-box').slideToggle();
-    regShow = true;
-  }
-
   if(logShow) {
     $('.login-portal').slideToggle();
     logShow = false;
+  }
+
+  if(!regShow) {
+    $('#reg-box').slideToggle();
+    regShow = true;
   }
 });
 

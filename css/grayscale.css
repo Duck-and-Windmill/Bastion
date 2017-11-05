@@ -126,10 +126,10 @@ a {
 #reg-box input[type="password"] {
   display: block;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 4px;
-  width: 220px;
-  height: 32px;
+  height: 50px;
+
   border: none;
   border-bottom: 1px solid #AAA;
   font-family: 'Roboto', sans-serif;
@@ -181,6 +181,7 @@ input {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 .form-signin .form-signin-heading,
@@ -214,10 +215,10 @@ input {
 #reg-box {
   position: relative;
   margin: 5% auto;
-  width: 500px;
+  width: 330px;
   height: 400px;
   background-color: rgba(0,0,0,0);
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
