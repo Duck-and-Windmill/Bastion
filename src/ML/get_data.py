@@ -78,8 +78,12 @@ def getData():
 	]
 	
 	sample_data = []
+
+	i = 1
 	for l in sample:
+		print('importing {}/{}'.format(i, len(sample)))
 		sample_data.append(transform(l))
+		i += 1
 
 	return sample_data
 
