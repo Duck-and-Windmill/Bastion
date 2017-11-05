@@ -1,12 +1,12 @@
 from sklearn.svm import SVC
 import numpy as np
-from scraper import scrape, 
+from scraper import scrape
 import data
 
-self.dataset = Dataset(500, 8)
+dataset = data.Dataset(100, 4)
 
-X = data.load_dataset('train')
-Y = data.load_dataset('test')
+X = dataset.load_dataset('train')
+Y = dataset.load_dataset('test')
 
 clf = SVC()
 clf.fit(X, Y)

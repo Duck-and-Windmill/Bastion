@@ -10,14 +10,13 @@ import matplotlib.pyplot as plt
 class Dataset(object):
 	def __init__(self, size, batch, train=0.7, val=0.1, test=0.2):
 		self.dataset = getData()
-		data = self.spiral_sample(n=size)
 		t = int(train*size)
 		v = int(val*size)
 		self.size = size
 		self.batch_size = int(batch)
-		self.train = data[0:t]
-		self.valid = data[t:t+v]
-		self.test = data[t+v:]
+		self.train = self.dataset[0:t]
+		self.valid = self.dataset[t:t+v]
+		self.test = self.dataset[t+v:]
 
 
 	def to_batched(self, dataset):
