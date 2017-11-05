@@ -24,6 +24,8 @@
     <link href="css/grayscale.min.css" rel="stylesheet">
     <link href="css/grayscale.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
@@ -52,9 +54,9 @@
               <a class="nav-link log-in" href="#">Sign In</a>
             </li>
 
-            <li class="nav-item">
+            <!--li class="nav-item">
               <a class="nav-link" href="#contact">Market</a>
-            </li>
+            </li-->
           </ul>
         </div>
       </div>
@@ -68,27 +70,20 @@
   <div class="center">
     <h1>Register</h1>
     
-    <input type="text" name="username" placeholder="Username" />
-    <input type="text" name="email" placeholder="E-mail" />
-    <input type="password" name="password" placeholder="Password" />
-    <input type="password" name="password2" placeholder="Retype password" />
+    <input id="regemail" type="text" name="email" placeholder="E-mail" />
+    <input id="regpassword" type="password" name="password" placeholder="Password" />
     
-    <input type="submit" name="signup_submit" value="Register" />
+    <input id="regsubmit" type="submit" name="signup_submit" value="Register" />
   </div>
   </div>
           <div class="login-portal" id="sign-in" style="display:none">
-            <form class="form-signin">
+            <form id="formthing" class="form-signin">
               <h2 class="form-signin-heading">Sign in</h2>
               <label for="inputEmail" class="sr-only">Email address</label>
               <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
               <label for="inputPassword" class="sr-only">Password</label>
               <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-              </div>
-              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+              <button id="loginbtn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </form>
             </div>
           <div class="row" id="main-text">
@@ -140,6 +135,49 @@
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
     <script src="js/grayscale.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAkwuO9GxcgxBrTJDrLF7SE4lUZNnewSn0",
+        authDomain: "bastion-66cb2.firebaseapp.com",
+        databaseURL: "https://bastion-66cb2.firebaseio.com",
+        projectId: "bastion-66cb2",
+        storageBucket: "bastion-66cb2.appspot.com",
+        messagingSenderId: "1071327721533"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#regsubmit").click(function(){
+          firebase.auth().createUserWithEmailAndPassword($("#regemail").val(), $("#regpassword").val()).then(function(){
+            swal("Success!", "Account Created", "success");
+          }).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            swal("Error: " + error.code, error.message, "error");
+          });
+        });
+
+        $("#loginbtn").click(function(){
+          firebase.auth().signInWithEmailAndPassword($("#inputEmail").val(), $("#inputPassword").val()).then(function(){
+            swal("Success!", "Login Successful", "success");
+          }).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            swal("Error: " + error.code, error.message, "error");
+          });
+        });
+
+        $("#formthing").submit(function(e){
+          e.preventDefault();
+        })
+      });
+    </script>
 
   </body>
 

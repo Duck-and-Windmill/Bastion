@@ -160,3 +160,17 @@ button.social-signin.twitter {
 button.social-signin.google {
   background: #DD4B39;
 }
+
+#reg-box {
+    background-color: #333 !important;
+    padding: 15px !important;
+    height: auto !important;
+}
+
+.form-signin {
+    background-color: #333 !important;
+}
+
+.form-signin .form-control {
+    margin: 10px 0 10px 0 !important;
+}
