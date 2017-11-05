@@ -3,15 +3,15 @@ from get_data import getData
 import matplotlib.pyplot as plt
 
 class Dataset(object):
-	def __init__(self, size, batch, train=0.7, val=0.1, test=0.2):
-		self.dataset = getData()
-		t = int(train*size)
-		v = int(val*size)
+	def __init__(self, size, batch, dataset = getData(), train=0.7, val=0.0, test=0.3):
+		self.dataset = dataset
+		train = int(train*size)
+		valid = int(val*size)
 		self.size = size
 		self.batch_size = int(batch)
-		self.train = self.dataset[0:t]
-		self.valid = self.dataset[t:t+v]
-		self.test = self.dataset[t+v:]
+		self.train = self.dataset[0:train]
+		# self.valid = self.dataset[t:t+v]
+		self.test = self.dataset[train:]
 
 	def load_dataset(self, name):
 		if name == 'full':

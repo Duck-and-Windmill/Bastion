@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import re
 
 def index():
-	with open('cache.txt', 'r+') as file:
+	with open('cache.txt', 'w+') as file:
 		gen_categories = file.read()
 
 		if not gen_categories:
@@ -52,7 +52,7 @@ def transform(url):
 	match = {}
 	for cat in categories:
 		compare = set(categories[cat])
-		match[cat] = len(compare & set(keys))
+		match[cat] = len(compare & set(keys))/len(compare) * 1000
 
 	ordered_match = []
 	for cat in ['food', 'sports', 'finance', 'music', 'travel', 'tech', 'education', 'entertainment', 'fashion']:
@@ -61,7 +61,7 @@ def transform(url):
 	return ordered_match
 
 def getData():
-	with open('sample_cache.txt', 'r+') as file:
+	with open('sample_cache.txt', 'w+') as file:
 		sample_data = file.read()
 
 		if not sample_data:
