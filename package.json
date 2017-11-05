@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Duck-and-Windmill/Bastion/issues"
   },
-  "homepage": "https://github.com/Duck-and-Windmill/Bastion#readme"
+  "homepage": "https://github.com/Duck-and-Windmill/Bastion#readme",
+  "dependencies": {
+    "http-proxy": "^1.16.2"
+  }
 }
