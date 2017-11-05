@@ -159,7 +159,7 @@ def filter_adjoined_candidates(candidates, min_freq):
 def generate_candidate_keywords(sentence_list, stopword_pattern, stop_word_list, min_char_length=1, max_words_length=5,
                                 min_words_length_adj=1, max_words_length_adj=1, min_phrase_freq_adj=2):
     punc_list = ['\\', '/','<','>', '=', '_', '(', ')', '*', '&', '^', '$', '@', '!', '#' 'script', 'webkit', '{', '}', 'facebook', 'twitter', 'instagram', 'pinterest', 
-        'layout', 'ribbon', 'css', 'search', 'share', 'regexp', 'void', 'return', 'object', 'string', 'array', 'block', 'height', 'width', 'weight', 'padding' 
+        'layout', 'ribbon', 'css', 'search', 'share', 'regexp', 'void', 'return', 'object', 'string', 'array', 'block', 'height', 'width', 'weight', 'padding', 'citation', 'retrieved' 
     ]
 
     phrase_list = []
