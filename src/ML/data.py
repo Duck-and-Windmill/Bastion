@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 class Dataset(object):
 	def __init__(self, size, batch, train=0.7, val=0.1, test=0.2):
 		self.dataset = getData()
-		data = self.spiral_sample(n=size)
+		self.data = self.spiral_sample(n=size)
 		t = int(train*size)
 		v = int(val*size)
 		self.size = size
