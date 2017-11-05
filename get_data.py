@@ -92,9 +92,15 @@ def getData():
 			]
 	
 			sample_data = []
+			final = {}
 			for key in hosts:
 				hits = hosts[key]['hits']
+				newkey = key.replace("\\", ".")
+				final[newkey] = {}
+				final[newkey]["totalTime"] = 0
+				final[newkey]["totalHits"] = hosts[key]['totalHits']
 				for time in hits:
+					final[newkey]["totalTime"] += hits[time]["timespent"]
 					sample.append(("https://" + key + hits[time]["path"]).replace("\\", "."))
 
 			i = 1
