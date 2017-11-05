@@ -5,7 +5,11 @@ from bs4 import BeautifulSoup
 import re
 
 def index():
+<<<<<<< HEAD
 	with open('cache.txt', 'r+') as file:
+=======
+	with open('cache.txt', 'w+') as file:
+>>>>>>> algo
 		gen_categories = file.read()
 
 		if not gen_categories:
@@ -52,7 +56,11 @@ def transform(url):
 	match = {}
 	for cat in categories:
 		compare = set(categories[cat])
+<<<<<<< HEAD
 		match[cat] = len(compare & set(keys))
+=======
+		match[cat] = len(compare & set(keys))/len(compare) * 1000
+>>>>>>> algo
 
 	ordered_match = []
 	for cat in ['food', 'sports', 'finance', 'music', 'travel', 'tech', 'education', 'entertainment', 'fashion']:
@@ -61,10 +69,17 @@ def transform(url):
 	return ordered_match
 
 def getData():
+<<<<<<< HEAD
 	with open('sample_cache.txt', 'r+') as file:
 		sample_data = file.read()
 
 		if not read_dat:
+=======
+	with open('sample_cache.txt', 'w+') as file:
+		sample_data = file.read()
+
+		if not sample_data:
+>>>>>>> algo
 			sample = ['https://www.nytimes.com/2017/11/03/technology/silicon-valley-baltimore-schools.html', 'https://www.nytimes.com/2017/11/01/technology/personaltech/apple-iphone-x-review.html', 
 			'https://www.livescience.com/60833-robot-cracks-captchas-in-minutes.html', 'http://www.slate.com/articles/technology/technology/2017/11/could_emphasizing_time_well_spent_fix_facebook_s_russia_problem.html',
 			'https://en.wikipedia.org/wiki/Bangkok', 'https://en.wikipedia.org/wiki/Boston_Celtics', 'https://en.wikipedia.org/wiki/JetBlue',
