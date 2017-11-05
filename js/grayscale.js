@@ -72,6 +72,38 @@ $('.log-in').click(function() {
     regShow = false;
   }
 
+  if(dataThere) {
+    $('#analytics').slideToggle();
+    dataThere = false;
+  }
+
+});
+
+var dataThere = false
+$('.profile').click(function() {
+  $('html, body').animate({
+      scrollTop: 0
+  }, 500, "easeInOutExpo");
+  if(!textHidden) {
+    $('#main-text').slideToggle();
+    textHidden = true;
+  }
+
+  if(!dataThere) {
+    $('#analytics').slideToggle();
+    dataThere = true;
+  }
+
+  if(logShow) {
+    $('.login-portal').slideToggle();
+    logShow = false;
+  }
+
+  if(regShow) {
+    $('#reg-box').slideToggle();
+    regShow = false;
+  }
+
 });
 
 $('.register').click(function() {
@@ -92,6 +124,11 @@ $('.register').click(function() {
   if(!regShow) {
     $('#reg-box').slideToggle();
     regShow = true;
+
+    if(dataThere) {
+    $('#analytics').slideToggle();
+    dataThere = false;
+  }
   }
 });
 

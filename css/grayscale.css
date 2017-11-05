@@ -122,6 +122,20 @@ a {
       .masthead .intro-body .intro-text {
         font-size: 22px; } }
 
+#analytics {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); 
+}
+
+#analytics .container {
+  text-align: left;
+  margin: 0 0 3px 20%;
+  border: 1px solid white;
+}
+
+#analytics .container span {
+  float: right;
+}
+
 #reg-box input[type="text"],
 #reg-box input[type="password"] {
   display: block;
