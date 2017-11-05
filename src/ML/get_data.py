@@ -61,29 +61,36 @@ def transform(url):
 	return ordered_match
 
 def getData():
-	#get dat data jinghu boi
-	sample = ['https://www.nytimes.com/2017/11/03/technology/silicon-valley-baltimore-schools.html', 'https://www.nytimes.com/2017/11/01/technology/personaltech/apple-iphone-x-review.html', 
-	'https://www.livescience.com/60833-robot-cracks-captchas-in-minutes.html', 'http://www.slate.com/articles/technology/technology/2017/11/could_emphasizing_time_well_spent_fix_facebook_s_russia_problem.html',
-	'https://en.wikipedia.org/wiki/Bangkok', 'https://en.wikipedia.org/wiki/Boston_Celtics', 'https://en.wikipedia.org/wiki/JetBlue',
-	'https://en.wikipedia.org/wiki/Hawaii', 'https://well.blogs.nytimes.com/2010/02/18/how-vacations-affect-your-happiness/', 'https://www.wsj.com/articles/what-you-need-to-know-for-winter-holiday-travel-1509550592',
-	'http://time.com/5006845/houston-astros-dodgers-world-series/', 'http://www.espn.com/nfl/story/_/id/21274790/nfl-owners-called-depositions-cellphone-records-colin-kaepernick-collusion-case',
-	'http://www.latimes.com/sports/la-sp-dodgers-plaschke-20171104-story.html', 'https://www.tennismindgame.com/tennis-articles.html', 'https://www.nytimes.com/2017/08/25/opinion/sunday/the-honor-of-boxing-is-at-stake.html',
-	'http://www.npr.org/sections/therecord/2017/11/03/561150174/tucker-beathard-is-more-than-country-musics-latest-punk', 'http://www.billboard.com/articles/news/dance/8023089/dj-snake-beats-by-dr-dre-paris-video',
-	'http://www.billboard.com/articles/news/dance/8015098/kygo-new-song-every-day-kids-in-love', 'http://www.nytimes.com/2013/10/13/opinion/sunday/is-music-the-key-to-success.html', 
-	'https://www.nytimes.com/2017/10/30/dining/five-food-stories-with-snacks.html', 'https://www.nytimes.com/2017/11/03/dining/thanksgiving-vegetable-recipes.html', 'https://www.nytimes.com/2017/10/30/dining/shake-shack-chili.html',
-	'https://www.nytimes.com/2017/11/03/dining/what-to-cook-this-weekend-newsletter.html', 'http://time.com/4988118/thor-ragnarok-surtur/', 'http://time.com/5010243/kevin-spacey-house-of-cards/', 'http://www.cnn.com/2017/11/04/us/selena-quintanilla-star-hollywood-walk-of-fame/index.html',
-	'https://hellogiggles.com/reviews-coverage/tv-shows/brandy-moesha-reboot/', 'https://www.nytimes.com/2017/11/03/education/edlife/choosing-a-college-major.html', 'https://www.nytimes.com/2017/10/31/opinion/adult-learners-college.html',
-	'https://psmag.com/education/making-homework-matter-dont-ban-it-fix-it', 'https://www.theatlantic.com/education/archive/2017/11/the-surprising-revolt-at-reed/544682/', 'https://www.vogue.com/article/lagos-fashion-design-week-2017-hat-trend-lakin-ogun',
-	'https://www.vogue.com/article/falana-lagos-fashion-design-week-2017', 'http://www.latimes.com/fashion/la-ig-fashion-forward-jenni-kayne-20171103-htmlstory.html', 'http://people.com/style/comfy-cozy-fall-sweaters/comfy-cozy-and-cute/'
-	]
-	
-	sample_data = []
+	with open('sample_cache.txt', 'r+') as file:
+		sample_data = file.read()
 
-	i = 1
-	for l in sample:
-		print('importing {}/{}'.format(i, len(sample)))
-		sample_data.append(transform(l))
-		i += 1
+		if not read_dat:
+			sample = ['https://www.nytimes.com/2017/11/03/technology/silicon-valley-baltimore-schools.html', 'https://www.nytimes.com/2017/11/01/technology/personaltech/apple-iphone-x-review.html', 
+			'https://www.livescience.com/60833-robot-cracks-captchas-in-minutes.html', 'http://www.slate.com/articles/technology/technology/2017/11/could_emphasizing_time_well_spent_fix_facebook_s_russia_problem.html',
+			'https://en.wikipedia.org/wiki/Bangkok', 'https://en.wikipedia.org/wiki/Boston_Celtics', 'https://en.wikipedia.org/wiki/JetBlue',
+			'https://en.wikipedia.org/wiki/Hawaii', 'https://well.blogs.nytimes.com/2010/02/18/how-vacations-affect-your-happiness/', 'https://www.wsj.com/articles/what-you-need-to-know-for-winter-holiday-travel-1509550592',
+			'http://time.com/5006845/houston-astros-dodgers-world-series/', 'http://www.espn.com/nfl/story/_/id/21274790/nfl-owners-called-depositions-cellphone-records-colin-kaepernick-collusion-case',
+			'http://www.latimes.com/sports/la-sp-dodgers-plaschke-20171104-story.html', 'https://www.tennismindgame.com/tennis-articles.html', 'https://www.nytimes.com/2017/08/25/opinion/sunday/the-honor-of-boxing-is-at-stake.html',
+			'http://www.npr.org/sections/therecord/2017/11/03/561150174/tucker-beathard-is-more-than-country-musics-latest-punk', 'http://www.billboard.com/articles/news/dance/8023089/dj-snake-beats-by-dr-dre-paris-video',
+			'http://www.billboard.com/articles/news/dance/8015098/kygo-new-song-every-day-kids-in-love', 'http://www.nytimes.com/2013/10/13/opinion/sunday/is-music-the-key-to-success.html', 
+			'https://www.nytimes.com/2017/10/30/dining/five-food-stories-with-snacks.html', 'https://www.nytimes.com/2017/11/03/dining/thanksgiving-vegetable-recipes.html', 'https://www.nytimes.com/2017/10/30/dining/shake-shack-chili.html',
+			'https://www.nytimes.com/2017/11/03/dining/what-to-cook-this-weekend-newsletter.html', 'http://time.com/4988118/thor-ragnarok-surtur/', 'http://time.com/5010243/kevin-spacey-house-of-cards/', 'http://www.cnn.com/2017/11/04/us/selena-quintanilla-star-hollywood-walk-of-fame/index.html',
+			'https://hellogiggles.com/reviews-coverage/tv-shows/brandy-moesha-reboot/', 'https://www.nytimes.com/2017/11/03/education/edlife/choosing-a-college-major.html', 'https://www.nytimes.com/2017/10/31/opinion/adult-learners-college.html',
+			'https://psmag.com/education/making-homework-matter-dont-ban-it-fix-it', 'https://www.theatlantic.com/education/archive/2017/11/the-surprising-revolt-at-reed/544682/', 'https://www.vogue.com/article/lagos-fashion-design-week-2017-hat-trend-lakin-ogun',
+			'https://www.vogue.com/article/falana-lagos-fashion-design-week-2017', 'http://www.latimes.com/fashion/la-ig-fashion-forward-jenni-kayne-20171103-htmlstory.html', 'http://people.com/style/comfy-cozy-fall-sweaters/comfy-cozy-and-cute/'
+			]
+	
+			sample_data = []
+
+			i = 1
+			for l in sample:
+				print('importing {}/{}'.format(i, len(sample)))
+				sample_data.append(transform(l))
+				i += 1
+
+			file.write(str(sample_data))
+		else:
+			sample_data = eval(sample_data)
 
 	return sample_data
 
