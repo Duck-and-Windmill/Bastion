@@ -158,13 +158,20 @@ def filter_adjoined_candidates(candidates, min_freq):
 
 def generate_candidate_keywords(sentence_list, stopword_pattern, stop_word_list, min_char_length=1, max_words_length=5,
                                 min_words_length_adj=1, max_words_length_adj=1, min_phrase_freq_adj=2):
+    punc_list = ['\\', '/','<','>', '=', '_', '(', ')', '*', '&', '^', '$', '@', '!', 'script', 'webkit', '{', '}']
+
     phrase_list = []
     for s in sentence_list:
         tmp = re.sub(stopword_pattern, '|', s.strip())
         phrases = tmp.split("|")
         for phrase in phrases:
-            if '\\' in phrase:
+            skip = False
+            for punc in punc_list:
+                if punc in phrase:
+                    skip = True
+            if skip:
                 continue
+                
             phrase = phrase.strip().lower()
             if phrase != "" and is_acceptable(phrase, min_char_length, max_words_length):
                 phrase_list.append(phrase)

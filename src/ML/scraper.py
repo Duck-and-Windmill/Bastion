@@ -21,4 +21,4 @@ def find_keywords(text):
 	keywords = ro.run(text)
 	return [k[0] for k in keywords]
 
-print(find_keywords(scrape('https://en.wikipedia.org/wiki/Basketball')))
+	
