@@ -1,7 +1,7 @@
 from sklearn.svm import SVC
 import numpy as np
 from scraper import scrape, 
-from data import data
+import data
 
 self.dataset = Dataset(500, 8)
 
