@@ -1,39 +1,187 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Material design sign up form</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+<html lang="en">
 
-  
-</head>
+  <head>
 
-<body>
-  <div id="login-box">
-  <div class="left">
-    <h1>Sign up</h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bastion</title>
+
+    <link rel="icon" href="img/bbb.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for  this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="">Bastion</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link register" href="#">Register</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link log-in" href="#">Sign In</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div id="reg-box" style="display: none">
+  <div class="center">
+    <h1>Register</h1>
     
-    <input type="text" name="username" placeholder="Username" />
-    <input type="text" name="email" placeholder="E-mail" />
-    <input type="password" name="password" placeholder="Password" />
-    <input type="password" name="password2" placeholder="Retype password" />
-    
-    <input type="submit" name="signup_submit" value="Sign me up" />
+    <input id="regemail" type="text" name="email" placeholder="E-mail" />
+    <input id="regpassword" type="password" name="password" placeholder="Password" />
+    <button id="regsubmit" class="btn btn-lg btn-primary btn-block register" type="submit">Register</button>
   </div>
-  
-  <div class="right">
-    <span class="loginwith">Sign in with<br />social network</span>
-    
-    <button class="social-signin facebook">Log in with facebook</button>
-    <button class="social-signin twitter">Log in with Twitter</button>
-    <button class="social-signin google">Log in with Google+</button>
   </div>
-  <div class="or">OR</div>
-</div>
-  
-  
-</body>
+          <div class="login-portal" id="sign-in" style="display:none">
+            <form id="formthing" class="form-signin">
+              <h2 class="form-signin-heading">Sign in</h2>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <button id="loginbtn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </form>
+            </div>
+          <div class="row" id="main-text">
+            <div class="col-lg-12 mx-auto">
+              <h1 class="brand-heading">Control your data.</h1>
+              <p class="intro-text">A data distributing platform.
+                <br></p>
+              <a href="#" class="btn btn-circle log-in">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          
+          </div>
+          <div class="col-lg-8 mx-auto" style="text-align: left">
+            <h2>About</h2>
+            <p>
+              We are Bastion, a team of college students who are sick of ISPs and service-providers taking our data and profiting off of it.
+              <br>
+              We install a proxy between your client browser and ISPs, preventing companies from taking your data and using it.
+              <br>
+              Instead, we'll take your data, process it, and sell it for you, giving you a cut of the profit as well. Might as well make some bucks with your data!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+    <script src="js/grayscale.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAkwuO9GxcgxBrTJDrLF7SE4lUZNnewSn0",
+        authDomain: "bastion-66cb2.firebaseapp.com",
+        databaseURL: "https://bastion-66cb2.firebaseio.com",
+        projectId: "bastion-66cb2",
+        storageBucket: "bastion-66cb2.appspot.com",
+        messagingSenderId: "1071327721533"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#regsubmit").click(function(){
+          firebase.auth().createUserWithEmailAndPassword($("#regemail").val(), $("#regpassword").val()).then(function(){
+            swal("Success!", "Account Created", "success");
+          }).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            swal("Error: " + error.code, error.message, "error");
+          });
+        });
+
+        $("#loginbtn").click(function(){
+          firebase.auth().signInWithEmailAndPassword($("#inputEmail").val(), $("#inputPassword").val()).then(function(){
+            swal("Success!", "Login Successful", "success");
+          }).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            swal("Error: " + error.code, error.message, "error");
+          });
+        });
+
+        $("#formthing").submit(function(e){
+          e.preventDefault();
+        })
+      });
+    </script>
+
+  </body>
+
 </html>
