@@ -3,7 +3,6 @@ from get_data import getData
 import matplotlib.pyplot as plt
 
 class Dataset(object):
-<<<<<<< HEAD
 	def __init__(self, size, batch, train=0.7, val=0.1, test=0.2):
 		self.dataset = getData()
 		t = int(train*size)
@@ -65,7 +64,7 @@ class Dataset(object):
 			return self.to_batched(self.valid)
 		elif name == 'test':
 			return self.to_batched(self.test)
-=======
+
 	def __init__(self, size, batch, dataset = getData(), train=0.7, val=0.0, test=0.3):
 		self.dataset = dataset
 		train = int(train*size)
@@ -85,7 +84,7 @@ class Dataset(object):
 			return self.valid
 		elif name == 'test':
 			return self.test
->>>>>>> algo
+
 		else:
 			raise Exception('data.load_dataset(): Invalid dataset')
 		
