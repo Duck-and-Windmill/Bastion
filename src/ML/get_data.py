@@ -87,7 +87,5 @@ def getData():
 
 	return sample_data
 
-print(transform('https://en.wikipedia.org/wiki/Startup_company'))
-
 
 

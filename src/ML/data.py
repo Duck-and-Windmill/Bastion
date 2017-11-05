@@ -1,9 +1,4 @@
-import numpy as np 
-from math import ceil
-from numpy import pi, exp, cos, sin, concatenate, asarray
-from numpy.random import normal, randn, choice, shuffle
-from torch.autograd import Variable
-from torch import FloatTensor, LongTensor
+import numpy as np
 from get_data import getData
 import matplotlib.pyplot as plt
 
@@ -25,7 +20,7 @@ class Dataset(object):
 		total = len(dataset)
 		print("Dataset: ", dataset)
 
-		for i in range(len(total)/self.batch_size):
+		for i in range(int(total/self.batch_size)):
 			points = dataset[prev:prev+self.batch_size] if prev+self.batch_size < total else dataset[prev:]
 			food = []
 			sports = []
@@ -49,8 +44,15 @@ class Dataset(object):
 				fashion.append(i)
 			prev += self.batch_size
 
-			batch_set.append([FloatTensor(food), FloatTensor(sports), FloatTensor(finance), FloatTensor(music), 
-				FloatTensor(travel), FloatTensor(tech), FloatTensor(education), FloatTensor(entertainment), FloatTensor(fashion)])
+			batch_set.append(food)
+			batch_set.append(sports)
+			batch_set.append(finance)
+			batch_set.append(music)
+			batch_set.append(travel)
+			batch_set.append(tech)
+			batch_set.append(education)
+			batch_set.append(entertainment)
+			batch_set.append(fashion)
 
 		return batch_set
 
