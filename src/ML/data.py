@@ -7,7 +7,6 @@ from torch import FloatTensor, LongTensor
 from get_data import get_data 
 import matplotlib.pyplot as plt
 
-
 class Dataset(object):
 	def __init__(self, size, batch, train=0.7, val=0.1, test=0.2):
 		self.dataset = get_data.getData()
