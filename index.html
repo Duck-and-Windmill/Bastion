@@ -43,10 +43,15 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#download">Sign In</a>
+              <a class="nav-link register" href="#">Register</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Market</a>
+              <a class="nav-link log-in" href="#">Sign In</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Market</a>
             </li>
           </ul>
         </div>
@@ -57,13 +62,40 @@
     <header class="masthead">
       <div class="intro-body">
         <div class="container">
+          <div id="reg-box" style="display: none">
+  <div class="center">
+    <h1>Register</h1>
+    
+    <input type="text" name="username" placeholder="Username" />
+    <input type="text" name="email" placeholder="E-mail" />
+    <input type="password" name="password" placeholder="Password" />
+    <input type="password" name="password2" placeholder="Retype password" />
+    
+    <input type="submit" name="signup_submit" value="Register" />
+  </div>
+  </div>
+          <div class="login-portal" id="sign-in" style="display:none">
+            <form class="form-signin">
+              <h2 class="form-signin-heading">Sign in</h2>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </form>
+            </div>
           <div class="row" id="main-text">
             <div class="col-lg-12 mx-auto">
               <h1 class="brand-heading">Control your data.</h1>
               <p class="intro-text">A data distributing platform.
                 <br></p>
-              <a href="#" class="btn btn-circle" id="log-in">
-                <i class="fa fa-angle-double-up animated"></i>
+              <a href="#" class="btn btn-circle log-in">
+                <i class="fa fa-angle-double-down animated"></i>
               </a>
             </div>
           </div>
@@ -75,19 +107,10 @@
     <section id="about" class="content-section text-center">
       <div class="container">
         <div class="row">
-          <div class="login-portal">
-            
           
           </div>
           <div class="col-lg-8 mx-auto">
-            <h2>About Grayscale</h2>
-            <p>Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by
-              <a href="http://gratisography.com/">Gratisography</a>
-              along with a custom Google Maps skin courtesy of
-              <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy customization!</p>
+            <h2>Our about</h2>
           </div>
         </div>
       </div>

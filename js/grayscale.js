@@ -9,7 +9,7 @@
       if (target.length) {
         $('html, body').animate({
           scrollTop: (target.offset().top - 48)
-        }, 1000, "easeInOutExpo");
+        }, 500, "easeInOutExpo");
         return false;
       }
     }
@@ -49,9 +49,50 @@ google.maps.event.addDomListener(window, 'resize', function() {
   map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
 });
 
+var textHidden = false;
+var logShow = false;
+var regShow = false;
 //Log-in button
-$('#log-in').click(function() {
-  $('#main-text').toggle();
+$('.log-in').click(function() {
+  $('html, body').animate({
+          scrollTop: 0
+    }, 500, "easeInOutExpo");
+  if(!textHidden) {
+    $('#main-text').slideToggle();
+    textHidden = true;
+  }
+
+  if(regShow) {
+    $('#reg-box').slideToggle();
+    regShow = false;
+  }
+
+  if(!logShow) {
+    $('.login-portal').slideToggle();
+    logShow = true;
+  }
+
+});
+
+$('.register').click(function() {
+  $('html, body').animate({
+      scrollTop: 0
+  }, 500, "easeInOutExpo");
+
+  if(!textHidden) {
+    $('#main-text').slideToggle();
+    textHidden = true;
+  }
+
+  if(!regShow) {
+    $('#reg-box').slideToggle();
+    regShow = true;
+  }
+
+  if(logShow) {
+    $('.login-portal').slideToggle();
+    logShow = false;
+  }
 });
 
 function init() {
