@@ -5,10 +5,7 @@ http.createServer(function(client_req, client_res) {
   console.log("Received request");
   console.log('serve: ' + client_req.url);
 
-  if (client_req.url) {
-    client_res.write("Running...");
-    client_res.end();
-  } else {
+  try {
     var proxy = http.get(client_req.url, function (res) {
       res.pipe(client_res, {
         end: true
@@ -18,7 +15,10 @@ http.createServer(function(client_req, client_res) {
     client_req.pipe(proxy, {
       end: true
     });
+  } catch (err) {
+      console.error(err)
   }
+    
 }).listen(port, function(){
   console.log("Listening on *:" + port);
 });
