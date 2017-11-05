@@ -24,9 +24,9 @@ def index():
 		"music": ['https://en.wikipedia.org/wiki/music', 'https://en.wikipedia.org/wiki/music_festival', 'https://en.wikipedia.org/wiki/rap', 'https://en.wikipedia.org/wiki/hip_hop', 'https://en.wikipedia.org/wiki/rhythm'],
 		"travel": ['https://en.wikipedia.org/wiki/travel', 'https://en.wikipedia.org/wiki/plane', 'https://en.wikipedia.org/wiki/resort', 'https://en.wikipedia.org/wiki/hotel', 'https://en.wikipedia.org/wiki/road_trip', 'https://en.wikipedia.org/wiki/vacation', 'https://en.wikipedia.org/wiki/city'],
 		"tech": ['https://en.wikipedia.org/wiki/technology', 'https://en.wikipedia.org/wiki/innovation', 'https://en.wikipedia.org/wiki/computers', 'https://en.wikipedia.org/wiki/web_development', 'https://en.wikipedia.org/wiki/computer_programming', 'https://en.wikipedia.org/wiki/software_development', 'https://en.wikipedia.org/wiki/machines', 'https://en.wikipedia.org/wiki/artificial_intelligence', 'https://en.wikipedia.org/wiki/machine_learning'],
-		"education": [],
-		"entertainment": [],
-		"fashion":[]
+		"education": ['https://en.wikipedia.org/wiki/school', 'https://en.wikipedia.org/wiki/education', 'https://en.wikipedia.org/wiki/crash_course', 'https://en.wikipedia.org/wiki/university', 'https://en.wikipedia.org/wiki/college', 'https://en.wikipedia.org/wiki/class', 'https://en.wikipedia.org/wiki/learning', 'https://en.wikipedia.org/wiki/'],
+		"entertainment": ['https://en.wikipedia.org/wiki/movie', 'https://en.wikipedia.org/wiki/youtube', 'https://en.wikipedia.org/wiki/television', 'https://en.wikipedia.org/wiki/shopping', 'https://en.wikipedia.org/wiki/gaming', 'https://en.wikipedia.org/wiki/videos', 'https://en.wikipedia.org/wiki/anime', 'https://en.wikipedia.org/wiki/cartoons', 'https://en.wikipedia.org/wiki/cable', 'https://en.wikipedia.org/wiki/entertainment'],
+		"fashion":['https://en.wikipedia.org/wiki/clothing', 'https://en.wikipedia.org/wiki/shopping', 'https://en.wikipedia.org/wiki/fashion', 'https://en.wikipedia.org/wiki/hypebeast', 'https://en.wikipedia.org/wiki/shoes', 'https://en.wikipedia.org/wiki/brand', 'https://en.wikipedia.org/wiki/branding', 'https://en.wikipedia.org/wiki/style', 'https://en.wikipedia.org/wiki/mainstream']
 	}
 
 	for cat in gen_categories:
