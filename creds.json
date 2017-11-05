@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bastion-66cb2",
+  "private_key_id": "679a449e2b64e7ad335cd30598428b94ad968749",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFzIPWnCBywyS1\nqRy+bduEBQw7Rz6ichbN0oRl4H71fhMChXwZwjLaxIfKk7L3fvsZ1B7CS/Y1yd8G\n43/6s3118Q1QW3/iMdYzAlcwxB2WJtJ66LkJW3uzEkCFgNcV4rP0rDBV5tBZxVxS\n2Tsi4mxQQA47RbhpWRkj5iRY7tajXjbEAXwasUoixY40b8C2HeEKPFI5CdRNh+sD\nRGcQjju4deObu4LiBwrh4TxDI5eINeL7eSlZ8ePPRwMs/KrYmOJ2JdtJyYU5hAR7\nMf8ll/7YjC3t+yDjbQnOul4WtRTGkpRFmMI2ZpSgvPKa0XFWsom8sow8OEoU0VpB\ndgZUErgPAgMBAAECggEACdvUNGWqvl2Ynk9UBe/O0ak4v1mhNxKNrWuROsyyN0U1\n6FnD4jrKMxo5lHDBKlHTbSmj8NY9atfpfFvpfJLmrXK60acF3D3Uqc0zkFQuD1ZX\nBlZEJsG/DCFcQus1jTsz8f2FGTr8ZoUOQXjfWDFF6cgPjYe/lcyhkqb9Z8tbul+4\n1zH793RVyo10idzp5JxZhPI3tBReHckRfAykUgp9RhQ0110uvPm4cy6jMFM1w9Uy\ntHfsZOywLRhVzzqNLlMr2jOVM5t5bJZShsCJUyhJ7klcjnJc00bYFCqUpe3Ml/9n\n3RylGnIC0Z7PjNEek3bSAYud/3QLANH/knJc976sOQKBgQDjdV4jWYHkSTsrBGhZ\nE8PY+j8YkdNjasqgZAIINLsloHzAPMeoLRlZa5ysS6Sf7MQV5Gwta844yj0r0Mpb\nm2IITvi5JPQaTHvucHN6x8N2mDzF2o2Xdw6yPGUKbSDbrFjAF5QuqSAi4+tCMiKy\n5yvC7uyWqa2oghEZTNIpOSqYiQKBgQDenmUHXuxK8CGjExMP5UME8ZAAxX9jqwrH\nk3RXrGK3YGPOzX5UF3HLQPfs4QLl+GVWTiK+L36cL2+7Qk5BiKiEEnPA6MmUxXlS\n5DhCyzBCTINhCZk/J9HLXU13C9xcsu64g2ccibNICKIatatNzznbgR3PZmpObpUe\nZe5Su2Z11wKBgEvS+VHBacqHGwFJE9v1+cigC16OZjBzDh8Pl5nSsjxl1pBi8o++\nkP+9HtpU0Qk67Vb68ZDmqjVGPcQYcwy8rJ5mbQWTKwiFTJ78v5JDe4ZSU5gFNkQy\nvSRve6NRI633MxK+CXjQilT3M5q6idSnuW/fI+FJqQlOapLLiBeT5f45AoGBALp4\nNKnC4ew3TgWZoZrr74JBkNyEkZr7lzDqm0Yg2CM/8vozeICZjrCwv7rEEzhsIv3y\nvvlNMSFEPrO8623LOVQ/XIQWuVsLOf+ruFCCf+7YxidO8fVLtlhA0/VGkxN2sa0O\nLB1kXi6VRKtYxp+LV6w8b6rc32jJCdEHkmPsIvvLAoGBALY1msY2zPoYP6MsUXY8\nftVx6dvwZDxYUlIC9U2agfXj/PmoWH2Y26aggzxN2Az47rJtCkjAZhawv44D4kCz\nGdecd87cxH60nqa4LMqVy6RLwGPvIJNJQY6SuWmYwwy/mNVLMSlaWqZrVUjao17W\nGcnw3QROX8zvDL/tdK5vXxv6\n-----END PRIVATE KEY-----\n",
+  "client_email": "bastion-66cb2@appspot.gserviceaccount.com",
+  "client_id": "116580348644078505982",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bastion-66cb2%40appspot.gserviceaccount.com"
+}
