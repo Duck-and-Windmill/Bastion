@@ -60,6 +60,10 @@ def transform(url):
 
 	return ordered_match
 
+def getData():
+	#get dat data jinghu boi
+	pass
+
 print(transform('https://en.wikipedia.org/wiki/Startup_company'))
 
 
