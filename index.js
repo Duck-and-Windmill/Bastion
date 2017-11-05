@@ -1,11 +1,14 @@
-var http = require('http');
+const http = require('http');
+const port = process.env.PORT || 8000;
 
-http.createServer(onRequest).listen(8000 || process.env.PORT);
+http.createServer(onRequest).listen(port);
+console.log("Running on port: " + port);
 
 function onRequest(client_req, client_res) {
+  console.log("Received request");
   console.log('serve: ' + client_req.url);
 
-  console.dir(client_req);
+  //console.dir(client_req);
 
   var options = {
     hostname: 'www.google.com',
