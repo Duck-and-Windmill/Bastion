@@ -3,7 +3,7 @@ from get_data import getData
 import matplotlib.pyplot as plt
 
 class Dataset(object):
-	def __init__(self, size, batch, dataset = getData(), train=0.7, val=0.0, test=0.3):
+	def __init__(self, size, batch, dataset = getData()[0], train=0.7, val=0.0, test=0.3):
 		self.dataset = dataset
 		train = int(train*size)
 		valid = int(val*size)

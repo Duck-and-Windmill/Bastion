@@ -74,6 +74,8 @@ def transform(url):
 def getData():
 	with open('sample_cache.txt', 'w+') as file:
 		sample_data = file.read()
+		with open('time_cache.txt', 'w+') as tfile:
+			final = tfile.read()
 
 		if not sample_data:
 			sample = ['https://www.nytimes.com/2017/11/03/technology/silicon-valley-baltimore-schools.html', 'https://www.nytimes.com/2017/11/01/technology/personaltech/apple-iphone-x-review.html', 
@@ -93,6 +95,7 @@ def getData():
 	
 			sample_data = []
 			final = {}
+
 			for key in hosts:
 				hits = hosts[key]['hits']
 				newkey = key.replace("\\", ".")
@@ -110,7 +113,9 @@ def getData():
 				i += 1
 
 			file.write(str(sample_data))
+			tfile.write(str(final))
 		else:
+			final = eval(final)
 			sample_data = eval(sample_data)
 
-	return sample_data
+	return sample_data, final, 
